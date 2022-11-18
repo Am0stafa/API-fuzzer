@@ -39,7 +39,8 @@ for page in range(1,numberOfPages+1):
             items_found[item] = {"price": int(price.replace(",", "")), "link": link}
         except:
             pass
-            
+         
+#* to sort a dictionary in python we need to first convert it to a list, sort the list then turn it back to a dictionary 
 sorted_items = sorted(items_found.items(), key=lambda x: x[1]['price'])
 
 for item in sorted_items:
